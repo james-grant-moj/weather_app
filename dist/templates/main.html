@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ mainCtrl.weatherData.city.name }} 5 day weather forecast.</h1>
+        </div>
+    </div>
+    <div class="row weather" ng-repeat="weather in mainCtrl.weatherData.list">
+        <div class="col-md-2">
+            <label>{{ weather.weather[0].description }}</label>
+        </div>
+        <div class="col-md-1">
+            <img ng-src="{{ 'http://openweathermap.org/img/w/' + (weather.weather[0].icon) + '.png'}}">
+        </div>
+        <div class="col-md-3">
+            {{  weather.dt_txt | date : 'EEEE, MMMM d, y' }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "name": "the_weather_app",
+  "version": "1.0.0",
+  "description": "Weather App",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp unit-tests , protractor protractor.conf.js"
+  },
+  "author": "James Grant",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-mocks": "^1.5.7",
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-bower-files": "^0.2.7",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-filenames": "^2.1.0",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "0.0.12",
+    "gulp-sass": "^2.3.2",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
+  }
+}
