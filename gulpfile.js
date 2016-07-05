@@ -29,8 +29,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('bootstrap-css', function () {
-    return gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css',
-        'bower_components/bootstrap/dist/css/bootstrap.min.css.map'],
+    return gulp.src(['bower_components/bootstrap/dist/css/bootstrap.css',
+        'bower_components/bootstrap/dist/css/bootstrap.css.map'],
         {base: 'bower_components/'})
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'))
@@ -46,12 +46,12 @@ gulp.task('js',function(){
 })
 
 gulp.task("bower-files", function(){
-    return gulp.src(['bower_components/angular/angular.min.js',
-        'bower_components/angular/angular.min.js.map',
-        'bower_components/angular-route/angular-route.min.js',
-        'bower_components/angular-route/angular-route.min.js.map',
-        'bower_components/bootstrap/dist/js/bootstrap.min.js',
-        'bower_components/jquery/dist/jquery.min.js'],
+    return gulp.src(['bower_components/angular/angular.js',
+        'bower_components/angular/angular.js.map',
+        'bower_components/angular-route/angular-route.js',
+        'bower_components/angular-route/angular-route.js.map',
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'bower_components/jquery/dist/jquery.js'],
         {base: 'bower_components/'})
         .pipe(gulp.dest('./dist/lib'))
 });
