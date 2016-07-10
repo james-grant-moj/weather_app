@@ -32,7 +32,6 @@ gulp.task('bootstrap-css', function () {
     return gulp.src(['bower_components/bootstrap/dist/css/bootstrap.css',
         'bower_components/bootstrap/dist/css/bootstrap.css.map'],
         {base: 'bower_components/'})
-        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'))
         .pipe(livereload({ start: true }));
 });
