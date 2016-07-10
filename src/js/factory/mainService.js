@@ -2,7 +2,7 @@
     'use strict';
     angular.module('weather_app')
         .factory('mainService',['$q','$http',function($q,$http){
-            var service = {};
+            const service = {};
             service.getWeatherData = getWeatherData;
             return service;
             function getWeatherData() {

@@ -7,7 +7,8 @@ concat = require('gulp-concat'),
 livereload = require('gulp-livereload'),
 gulpBowerFiles = require('gulp-bower-files'),
 jasmine = require('gulp-jasmine'),
-Server = require('karma').Server;
+Server = require('karma').Server,
+babel = require('gulp-babel');
 
 gulp.task('entry', function () {
     return gulp.src('./src/*.html')
@@ -39,6 +40,9 @@ gulp.task('bootstrap-css', function () {
 gulp.task('js',function(){
     return gulp.src('./src/js/**/*.js')
         .pipe(concat('build.js'))
+		.pipe(babel({
+			presets: ['es2015']
+		}))
         .pipe(minify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(livereload({ start: true }));
